@@ -166,7 +166,7 @@ Open a shell prompt in the container and type (replacing `<container-name>` with
 
 At the prompt, enter:
 
-	# /opt/logstash/bin/logstash --path.data /tmp/logstash/data \
+	# /opt/logstash/bin/logstash --path.data /tmp/logstash/datagit push -u origin master \
 		-e 'input { stdin { } } output { elasticsearch { hosts => ["localhost"] } }'
 
 Wait for Logstash to start (as indicated by the message `The stdin plugin is now waiting for input:`), then type some dummy text followed by Enter to create a log entry:

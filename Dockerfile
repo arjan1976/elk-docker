@@ -1,5 +1,5 @@
 # Dockerfile for ELK stack
-# Elasticsearch, Logstash, Kibana 6.5.1
+# Elasticsearch, Logstash, Kibana 6.6.0
 
 # Build with:
 # docker build -t <repo-user>/elk .
@@ -8,7 +8,6 @@
 # docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk <repo-user>/elk
 
 FROM phusion/baseimage
-MAINTAINER Sebastien Pujadas http://pujadas.net
 ENV REFRESHED_AT 2017-02-28
 
 
@@ -18,7 +17,7 @@ ENV REFRESHED_AT 2017-02-28
 
 ### install prerequisites (cURL, gosu, JDK, tzdata)
 
-ENV GOSU_VERSION 1.10
+ENV GOSU_VERSION 1.11
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN set -x \
@@ -39,7 +38,7 @@ RUN set -x \
  && set +x
 
 
-ENV ELK_VERSION 6.5.1
+ENV ELK_VERSION 6.6.0
 
 ### install Elasticsearch
 
