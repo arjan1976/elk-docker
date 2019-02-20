@@ -38,7 +38,7 @@ RUN set -x \
  && set +x
 
 
-ENV ELK_VERSION 6.6.0
+ENV ELK_VERSION 7.0.0-beta1
 
 ### install Elasticsearch
 
