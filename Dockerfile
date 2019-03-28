@@ -38,11 +38,12 @@ RUN set -x \
  && set +x
 
 
-ENV ELK_VERSION 7.0.0-rc1-linux-x86_64
+ENV ELK_VERSION 7.0.0-rc1
+ENV ELK_DISTRO -linux-x86_64
 
 ### install Elasticsearch
 
-ENV ES_VERSION ${ELK_VERSION}
+ENV ES_VERSION ${ELK_VERSION}{ELK_DISTRO}
 ENV ES_HOME /opt/elasticsearch
 ENV ES_PACKAGE elasticsearch-${ES_VERSION}.tar.gz
 ENV ES_GID 991
@@ -90,7 +91,7 @@ RUN sed -i -e 's#^LS_HOME=$#LS_HOME='$LOGSTASH_HOME'#' /etc/init.d/logstash \
 
 ### install Kibana
 
-ENV KIBANA_VERSION ${ELK_VERSION}
+ENV KIBANA_VERSION ${ELK_VERSION}{ELK_DISTRO}
 ENV KIBANA_HOME /opt/kibana
 ENV KIBANA_PACKAGE kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz
 ENV KIBANA_GID 993
