@@ -91,9 +91,11 @@ RUN sed -i -e 's#^LS_HOME=$#LS_HOME='$LOGSTASH_HOME'#' /etc/init.d/logstash \
 
 ### install Kibana
 
+
+
 ENV KIBANA_VERSION ${ELK_VERSION}
 ENV KIBANA_HOME /opt/kibana
-ENV KIBANA_PACKAGE kibana-${KIBANA_VERSION}
+ENV KIBANA_PACKAGE kibana-${KIBANA_VERSION}.tar.gz
 ENV KIBANA_GID 993
 ENV KIBANA_UID 993
 
