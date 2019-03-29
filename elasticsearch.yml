@@ -47,7 +47,7 @@ path.repo: /var/backups
 bootstrap.memory_lock: true
 bootstrap.system_call_filter: false
 cluster.initial_master_nodes: 
-    - 136.144.222.106
+    - ELKTestNode
 
 #
 # Make sure that the heap size is set to about half the memory available
