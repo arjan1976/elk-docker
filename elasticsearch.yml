@@ -14,13 +14,13 @@
 #
 # Use a descriptive name for your cluster:
 #
-#cluster.name: my-application
+cluster.name: ELKTestCluster
 #
 # ------------------------------------ Node ------------------------------------
 #
 # Use a descriptive name for the node:
 #
-#node.name: node-1
+node.name: ELKTestNode
 #
 # Add custom attributes to the node:
 #
@@ -46,6 +46,8 @@ path.repo: /var/backups
 #
 bootstrap.memory_lock: true
 bootstrap.system_call_filter: false
+cluster.initial_master_nodes: 
+    - 136.144.222.106
 
 #
 # Make sure that the heap size is set to about half the memory available
