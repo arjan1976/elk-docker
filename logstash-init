@@ -99,7 +99,7 @@ stop() {
 
 status() {
   if [ -f "$pidfile" ] ; then
-    pid=$(cat "$pidfile")
+    pid=$(cat "$pidfile")D
     if kill -0 $pid > /dev/null 2> /dev/null; then
       # process by this pid is running.
       # It may not be our pid, but that's what you get with just pidfiles.
