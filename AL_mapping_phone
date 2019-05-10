@@ -195,15 +195,6 @@ PUT phone
         "type": "float"
       },
       "location": {
-        "type": "text",
-        "fields": {
-          "keyword": {
-            "type": "keyword",
-            "ignore_above": 256
-          }
-        }
-      },
-      "geolocation": {
         "type": "geo_point"
       },
       "log_duration_seconds": {
