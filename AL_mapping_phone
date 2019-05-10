@@ -1,1 +1,526 @@
-
+PUT phone
+{
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+      "type": "date"
+      },
+      "acceleration": {
+        "type": "long"
+      },
+      "acceleration_kmh": {
+        "type": "long"
+      },
+      "acceleration_mph": {
+        "type": "long"
+      },
+      "accelerometer0": {
+        "type": "float"
+      },
+      "accelerometer1": {
+        "type": "float"
+      },
+      "accelerometer2": {
+        "type": "float"
+      },
+      "accelerometer_uncalibrated0": {
+        "type": "float"
+      },
+      "accelerometer_uncalibrated1": {
+        "type": "float"
+      },
+      "accelerometer_uncalibrated2": {
+        "type": "float"
+      },
+      "accelerometer_uncalibrated3": {
+        "type": "long"
+      },
+      "accelerometer_uncalibrated4": {
+        "type": "long"
+      },
+      "accelerometer_uncalibrated5": {
+        "type": "long"
+      },
+      "accuracy": {
+        "type": "float"
+      },
+      "altitude": {
+        "type": "long"
+      },
+      "amd0": {
+        "type": "long"
+      },
+      "amd1": {
+        "type": "long"
+      },
+      "amd10": {
+        "type": "long"
+      },
+      "amd11": {
+        "type": "long"
+      },
+      "amd12": {
+        "type": "long"
+      },
+      "amd13": {
+        "type": "long"
+      },
+      "amd14": {
+        "type": "long"
+      },
+      "amd15": {
+        "type": "long"
+      },
+      "amd2": {
+        "type": "long"
+      },
+      "amd3": {
+        "type": "long"
+      },
+      "amd4": {
+        "type": "long"
+      },
+      "amd5": {
+        "type": "long"
+      },
+      "amd6": {
+        "type": "long"
+      },
+      "amd7": {
+        "type": "long"
+      },
+      "amd8": {
+        "type": "long"
+      },
+      "amd9": {
+        "type": "long"
+      },
+      "bearing": {
+        "type": "float"
+      },
+      "distance_feet": {
+        "type": "long"
+      },
+      "distance_metres": {
+        "type": "long"
+      },
+      "frequency": {
+        "type": "float"
+      },
+      "game_rotation_vector0": {
+        "type": "float"
+      },
+      "game_rotation_vector1": {
+        "type": "float"
+      },
+      "game_rotation_vector2": {
+        "type": "float"
+      },
+      "game_rotation_vector3": {
+        "type": "float"
+      },
+      "geomagnetic_rotation_vector0": {
+        "type": "float"
+      },
+      "geomagnetic_rotation_vector1": {
+        "type": "float"
+      },
+      "geomagnetic_rotation_vector2": {
+        "type": "float"
+      },
+      "geomagnetic_rotation_vector3": {
+        "type": "float"
+      },
+      "geomagnetic_rotation_vector4": {
+        "type": "long"
+      },
+      "gps_provider": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "gps_updates": {
+        "type": "long"
+      },
+      "gravity0": {
+        "type": "float"
+      },
+      "gravity1": {
+        "type": "float"
+      },
+      "gravity2": {
+        "type": "float"
+      },
+      "gyroscope0": {
+        "type": "float"
+      },
+      "gyroscope1": {
+        "type": "float"
+      },
+      "gyroscope2": {
+        "type": "float"
+      },
+      "gyroscope_uncalibrated0": {
+        "type": "float"
+      },
+      "gyroscope_uncalibrated1": {
+        "type": "float"
+      },
+      "gyroscope_uncalibrated2": {
+        "type": "float"
+      },
+      "gyroscope_uncalibrated3": {
+        "type": "float"
+      },
+      "gyroscope_uncalibrated4": {
+        "type": "float"
+      },
+      "gyroscope_uncalibrated5": {
+        "type": "float"
+      },
+      "light0": {
+        "type": "long"
+      },
+      "linear_acceleration0": {
+        "type": "float"
+      },
+      "linear_acceleration1": {
+        "type": "float"
+      },
+      "linear_acceleration2": {
+        "type": "float"
+      },
+      "location": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "geolocation": {
+        "type": "geo_point"
+      },
+      "log_duration_seconds": {
+        "type": "long"
+      },
+      "loudness": {
+        "type": "float"
+      },
+      "magnetic_field0": {
+        "type": "float"
+      },
+      "magnetic_field1": {
+        "type": "float"
+      },
+      "magnetic_field2": {
+        "type": "float"
+      },
+      "magnetic_field_uncalibrated0": {
+        "type": "float"
+      },
+      "magnetic_field_uncalibrated1": {
+        "type": "float"
+      },
+      "magnetic_field_uncalibrated2": {
+        "type": "float"
+      },
+      "magnetic_field_uncalibrated3": {
+        "type": "float"
+      },
+      "magnetic_field_uncalibrated4": {
+        "type": "float"
+      },
+      "magnetic_field_uncalibrated5": {
+        "type": "float"
+      },
+      "motion_accel0": {
+        "type": "float"
+      },
+      "motion_accel1": {
+        "type": "float"
+      },
+      "motion_accel10": {
+        "type": "long"
+      },
+      "motion_accel11": {
+        "type": "long"
+      },
+      "motion_accel12": {
+        "type": "long"
+      },
+      "motion_accel13": {
+        "type": "long"
+      },
+      "motion_accel14": {
+        "type": "long"
+      },
+      "motion_accel15": {
+        "type": "long"
+      },
+      "motion_accel2": {
+        "type": "float"
+      },
+      "motion_accel3": {
+        "type": "float"
+      },
+      "motion_accel4": {
+        "type": "long"
+      },
+      "motion_accel5": {
+        "type": "long"
+      },
+      "motion_accel6": {
+        "type": "long"
+      },
+      "motion_accel7": {
+        "type": "long"
+      },
+      "motion_accel8": {
+        "type": "long"
+      },
+      "motion_accel9": {
+        "type": "long"
+      },
+      "orientation0": {
+        "type": "float"
+      },
+      "orientation1": {
+        "type": "float"
+      },
+      "orientation2": {
+        "type": "float"
+      },
+      "pedometer0": {
+        "type": "long"
+      },
+      "pedometer1": {
+        "type": "float"
+      },
+      "pedometer10": {
+        "type": "long"
+      },
+      "pedometer11": {
+        "type": "long"
+      },
+      "pedometer12": {
+        "type": "float"
+      },
+      "pedometer14": {
+        "type": "float"
+      },
+      "pedometer15": {
+        "type": "long"
+      },
+      "pedometer2": {
+        "type": "long"
+      },
+      "pedometer3": {
+        "type": "float"
+      },
+      "pedometer5": {
+        "type": "float"
+      },
+      "pedometer7": {
+        "type": "float"
+      },
+      "pedometer8": {
+        "type": "float"
+      },
+      "pickup0": {
+        "type": "long"
+      },
+      "pickup1": {
+        "type": "long"
+      },
+      "pickup11": {
+        "type": "float"
+      },
+      "pickup13": {
+        "type": "float"
+      },
+      "pickup14": {
+        "type": "long"
+      },
+      "pickup15": {
+        "type": "float"
+      },
+      "pickup3": {
+        "type": "float"
+      },
+      "pickup5": {
+        "type": "float"
+      },
+      "pickup7": {
+        "type": "float"
+      },
+      "pickup9": {
+        "type": "float"
+      },
+      "pocket0": {
+        "type": "long"
+      },
+      "pocket1": {
+        "type": "long"
+      },
+      "pocket10": {
+        "type": "float"
+      },
+      "pocket11": {
+        "type": "float"
+      },
+      "pocket12": {
+        "type": "long"
+      },
+      "pocket13": {
+        "type": "float"
+      },
+      "pocket15": {
+        "type": "float"
+      },
+      "pocket2": {
+        "type": "long"
+      },
+      "pocket3": {
+        "type": "long"
+      },
+      "pocket5": {
+        "type": "float"
+      },
+      "pocket7": {
+        "type": "float"
+      },
+      "pocket8": {
+        "type": "long"
+      },
+      "pocket9": {
+        "type": "float"
+      },
+      "proximity0": {
+        "type": "float"
+      },
+      "proximity1": {
+        "type": "long"
+      },
+      "proximity2": {
+        "type": "long"
+      },
+      "rmd0": {
+        "type": "long"
+      },
+      "rmd1": {
+        "type": "long"
+      },
+      "rmd10": {
+        "type": "long"
+      },
+      "rmd11": {
+        "type": "long"
+      },
+      "rmd12": {
+        "type": "long"
+      },
+      "rmd13": {
+        "type": "long"
+      },
+      "rmd14": {
+        "type": "long"
+      },
+      "rmd15": {
+        "type": "long"
+      },
+      "rmd2": {
+        "type": "long"
+      },
+      "rmd3": {
+        "type": "long"
+      },
+      "rmd4": {
+        "type": "long"
+      },
+      "rmd5": {
+        "type": "long"
+      },
+      "rmd6": {
+        "type": "long"
+      },
+      "rmd7": {
+        "type": "long"
+      },
+      "rmd8": {
+        "type": "long"
+      },
+      "rmd9": {
+        "type": "long"
+      },
+      "rotation_vector0": {
+        "type": "float"
+      },
+      "rotation_vector1": {
+        "type": "float"
+      },
+      "rotation_vector2": {
+        "type": "float"
+      },
+      "rotation_vector3": {
+        "type": "float"
+      },
+      "rotation_vector4": {
+        "type": "long"
+      },
+      "speed": {
+        "type": "float"
+      },
+      "speed_kmh": {
+        "type": "float"
+      },
+      "speed_mph": {
+        "type": "float"
+      },
+      "start_location": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "start_time": {
+        "type": "date"
+      },
+      "step_counter0": {
+        "type": "long"
+      },
+      "step_detector0": {
+        "type": "long"
+      },
+      "tag": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "tilt_detector0": {
+        "type": "long"
+      },
+      "total_distance_km": {
+        "type": "long"
+      },
+      "total_distance_metres": {
+        "type": "long"
+      },
+      "total_distance_miles": {
+        "type": "long"
+      }
+    }
+  }
+}
