@@ -1,0 +1,48 @@
+{
+  "@timestamp": {
+    "type": "date"
+  },
+  "agent": {
+    "type": "text"
+  },
+  "auth": {
+    "type": "keyword"
+  },
+  "bytes": {
+    "type": "long"
+  },
+  "clientip": {
+    "type": "ip"
+  },
+  "location": {
+    "type": "geo_point"
+  },
+  "httpversion": {
+    "type": "double"
+  },
+  "ident": {
+    "type": "keyword"
+  },
+  "message": {
+    "type": "text"
+  },
+  "referrer": {
+    "type": "text"
+  },
+  "request": {
+    "type": "text"
+  },
+  "response": {
+    "type": "long"
+  },
+  "verb": {
+    "type": "keyword"
+  },
+  "geoip"  : {
+    "dynamic": true,
+    "properties" : {
+      "clientip": { "type": "ip" },
+      "location" : { "type" : "geo_point" }
+  }
+}
+}

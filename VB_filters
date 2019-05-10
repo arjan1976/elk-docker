@@ -1,0 +1,32 @@
+{
+  "description": "Ingest pipeline created by file structure finder",
+  "processors": [
+    {
+      "grok": {
+        "field": "message",
+        "patterns": [
+          "%{COMBINEDAPACHELOG}"
+        ]
+      }
+    },
+    {
+      "date": {
+        "field": "timestamp",
+        "formats": [
+          "dd/MMM/yyyy:HH:mm:ss XX"
+        ]
+      }
+    },
+    {
+      "remove": {
+        "field": "timestamp"
+      }
+    },
+    {
+      "geoip" : {
+        "field" : "clientip"
+      }
+    }
+  ]
+}
+
